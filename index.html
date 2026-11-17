@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>L.R. Engineering Works</title>
+    <!-- Bootstrap link CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Internal link of css -->
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- fafa icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar shadow-sm">
+        <div class="container">
+            <a class="navbar-brand py-1" href="index.html">
+                <img src="img/lrlogo.png" alt="L.R. Engineering Works Logo" class="navbar-logo">
+            </a>
+
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 custom-nav-links">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="img/slide1.jpg" class="d-block w-100 carousel-img" alt="High Quality Wire Ropes">
+                <div class="carousel-caption-overlay d-flex align-items-center">
+                    <div class="container text-start px-4">
+                        <h1 class="display-4 fw-bold text-white mb-3">Heavy Industrial Wire Ropes Sling</h1>
+                        <p class="lead text-light mb-4 max-width-text">Heavy-duty steel wire ropes engineered for
+                            maximum strength, durability, and extreme lifting operations.</p>
+                        <a href="#contact" class="btn btn-accent btn-lg px-4 py-2 fw-semibold">
+                            <i class="fa fa-envelope me-2"></i>Contact For Quotes
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="img/slide2.jpg" class="d-block w-100 carousel-img" alt="Certified Wire Rope Slings">
+                <div class="carousel-caption-overlay d-flex align-items-center">
+                    <div class="container text-start px-4">
+                        <h1 class="display-4 fw-bold text-white mb-3">Polyester Webbing Slings</h1>
+                        <p class="lead text-light mb-4 max-width-text">Precision-manufactured lifting slings offering excellent flexibility, load stability and surface protection.</p>
+                        <a href="#contact" class="btn btn-accent btn-lg px-4 py-2 fw-semibold">
+                            <i class="fa fa-phone me-2"></i>Get In Touch With Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="img/slide3.jpg" class="d-block w-100 carousel-img" alt="Heavy Rigging Hardware">
+                <div class="carousel-caption-overlay d-flex align-items-center">
+                    <div class="container text-start px-4">
+                        <h1 class="display-4 fw-bold text-white mb-3">Heavy Duty Rigging Hardware</h1>
+                        <p class="lead text-light mb-4 max-width-text">Shackles, turnbuckles, hooks, and links built to
+                            meet global safety standards under high structural loads.</p>
+                        <a href="#contact" class="btn btn-accent btn-lg px-4 py-2 fw-semibold">
+                            <i class="fa fa-info-circle me-2"></i>Request Catalog
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!-- Company name -->
+    <section id="company-branding-banner" class="py-5 bg-white border-bottom">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-10 col-md-8">
+
+                    <h1 class="fw-bold text-dark text-uppercase tracking-wide fs-2 display-md-4 mb-3">
+                        L.R. Engineering Works
+                    </h1>
+
+                    <div class="accent-line mx-auto"></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- About -->
+    <section class="py-5 bg-light border-bottom">
+        <div class="container py-4">
+            <div class="row g-4 align-items-stretch">
+
+                <div class="col-lg-7 d-flex flex-column justify-content-center">
+                    <div class="mb-3">
+                        <span class="badge bg-dark px-3 py-2 text-uppercase tracking-wider font-monospace">
+                            <i class="fa fa-certificate text-warning me-1"></i> AN ISO 9001:2015 Certified Company
+                        </span>
+                    </div>
+                    <h2 class="fw-bold text-dark mb-2">A House of Lifting & Industrial Safety Equipments</h2>
+                    <p class="text-muted fw-semibold mb-4 fs-5">Leading manufacturer and supplier of heavy lifting items
+                        based in Calcutta.</p>
+
+                    <p class="text-secondary lh-lg mb-4">
+                        We are one of the leading manufacturers of lifting items in Calcutta. We have an experience of
+                        <strong>more than 40 years</strong> in this field. With an established dealers network running
+                        all over India, we are recognized for our timely logistics delivery and strict quality
+                        compliance tailored exactly as per customer's requirement.
+                    </p>
+
+                    <div class="row g-3 text-secondary mb-2">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <span>40+ Years Heritage Experience</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fa fa-truck text-success"></i>
+                                <span>Pan-India Dealer Logistics Network</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="position-relative rounded-4 overflow-hidden">
+                        <img src="img/about-page.png" class="img-fluid w-100 object-cover"
+                            alt="L.R. Engineering Works Workshop" style=" object-fit: contain;">
+                        <!-- <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-dark bg-opacity-75 text-white">
+                            <span class="fw-semibold small"><i class="fa fa-certificate text-accent me-2"></i>ISO
+                                9001:2015 Certified Manufacturing Facility</span>
+                        </div> -->
+                    </div>
+                </div>
+<!-- 
+                <div class="col-lg-5">
+                    <div
+                        class="card h-100 border-0 shadow-sm p-4 bg-white rounded-3 d-flex flex-column justify-content-between zoom-card">
+                        <div>
+                            <h4 class="fw-bold text-dark mb-3 pb-2 border-bottom">
+                                <i class="fa fa-industry text-secondary me-2"></i>Trusted Supplier To:
+                            </h4>
+                            <ul class="list-group list-group-flush credentials-list">
+                                <li class="list-group-item px-0 d-flex align-items-center gap-2">
+                                    <i class="fa fa-caret-right text-accent"></i> TATA Steel Ltd. &amp; TATA Steel BSL
+                                    Ltd.
+                                </li>
+                                <li class="list-group-item px-0 d-flex align-items-center gap-2">
+                                    <i class="fa fa-caret-right text-accent"></i> Bhushan Steel &amp; Bhushan Power and
+                                    Steel Ltd.
+                                </li>
+                                <li class="list-group-item px-0 d-flex align-items-center gap-2">
+                                    <i class="fa fa-caret-right text-accent"></i> Sunflag Iron and Steel Ltd.
+                                </li>
+                                <li class="list-group-item px-0 d-flex align-items-center gap-2">
+                                    <i class="fa fa-caret-right text-accent"></i> Rungta Mines Ltd.
+                                </li>
+                                <li class="list-group-item px-0 d-flex align-items-center gap-2">
+                                    <i class="fa fa-caret-right text-accent"></i> Skipper India Ltd.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-4 pt-3 bg-light p-3 rounded text-center border">
+                            <span class="small fw-semibold text-muted">Strict adherence to national and international
+                                structural safety regulations.</span>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Products -->
+
+    <!-- Product Categories Section -->
+    <section id="product-categories" class="category-section py-5 border-bottom">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark display-5 mb-2 text-uppercase" style="font-family: var(--font-heading);">
+                    Our Product Categories</h2>
+                <div class="accent-line mx-auto mb-3"></div>
+                <p class="text-muted max-width-text mx-auto">Explore our complete range of industrial lifting, rigging
+                    and wire rope solutions. Click on any category to browse all related products.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Category 1: Wire Rope -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card h-100 category-card border-0 shadow-sm position-relative">
+                        <div class="category-img-container">
+                            <img src="img/product/main-wire-rope.jpg" class="category-img" alt="Wire Rope" loading="lazy">
+                            <div class="category-icon-overlay">
+                                <i class="fa fa-random"></i>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 bg-white d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h3 class="category-title mb-0">Wire Rope</h3>
+                                </div>
+                                <p class="category-desc mb-4">High quality galvanized, stainless steel and industrial
+                                    wire ropes for cranes, elevators, mining, marine and heavy lifting applications.</p>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="wire-rope.html" class="btn-category-view stretched-link">
+                                    View Products <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Wire Rope Sling -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card h-100 category-card border-0 shadow-sm position-relative">
+                        <div class="category-img-container">
+                            <img src="new-img/2-leg-wire-rope-sling.png" class="category-img" alt="Wire Rope Sling"
+                                loading="lazy">
+                            <div class="category-icon-overlay">
+                                <i class="fa fa-arrows-alt"></i>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 bg-white d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h3 class="category-title mb-0">Wire Rope Sling</h3>
+                                </div>
+                                <p class="category-desc mb-4">Professionally manufactured wire rope slings for
+                                    heavy-duty lifting, construction, ports and industrial applications.</p>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="wire-rope-sling.html" class="btn-category-view stretched-link">
+                                    View Products <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Polyester Webbing Sling -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card h-100 category-card border-0 shadow-sm position-relative">
+                        <div class="category-img-container">
+                            <img src="new-img/ratchet-belt.png" class="category-img" alt="Polyester Webbing Sling"
+                                loading="lazy">
+                            <div class="category-icon-overlay">
+                                <i class="fa fa-shield"></i>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 bg-white d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h3 class="category-title mb-0">Polyester Webbing Sling</h3>
+                                </div>
+                                <p class="category-desc mb-4">Durable polyester lifting slings designed for safe
+                                    handling of delicate and heavy industrial loads.</p>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="polyester-webbing-sling.html" class="btn-category-view stretched-link">
+                                    View Products <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 4: Chain Sling -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card h-100 category-card border-0 shadow-sm position-relative">
+                        <div class="category-img-container">
+                            <img src="new-img/4-leg-chain-sling.png" class="category-img" alt="Chain Sling"
+                                loading="lazy">
+                            <div class="category-icon-overlay">
+                                <i class="fa fa-link"></i>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 bg-white d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h3 class="category-title mb-0">Chain Sling</h3>
+                                </div>
+                                <p class="category-desc mb-4">Heavy-duty alloy chain slings suitable for lifting,
+                                    rigging and material handling applications.</p>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="chain-sling.html" class="btn-category-view stretched-link">
+                                    View Products <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 5: Lifting Tackles -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card h-100 category-card border-0 shadow-sm position-relative">
+                        <div class="category-img-container">
+                            <img src="img/product/lifting-tackles-overview.png" class="category-img" alt="Lifting Tackles" loading="lazy">
+                            <div class="category-icon-overlay">
+                                <i class="fa fa-cogs"></i>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 bg-white d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h3 class="category-title mb-0">Lifting Tackles</h3>
+                                </div>
+                                <p class="category-desc mb-4">Complete lifting equipment designed for construction,
+                                    engineering, manufacturing and heavy industries.</p>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="lifting-tackles.html" class="btn-category-view stretched-link">
+                                    View Products <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 6: Rigging Hardware -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card h-100 category-card border-0 shadow-sm position-relative">
+                        <div class="category-img-container">
+                            <img src="new-img/chain-connector.png" class="category-img" alt="Rigging Hardware" loading="lazy">
+                            <div class="category-icon-overlay">
+                                <i class="fa fa-wrench"></i>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 bg-white d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h3 class="category-title mb-0">Rigging Hardware</h3>
+                                </div>
+                                <p class="category-desc mb-4">Complete range of rigging hardware, lifting fittings and
+                                    wire rope accessories for industrial applications.</p>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="rigging-hardware.html" class="btn-category-view stretched-link">
+                                    View Products <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL CONNECT -->
+    <section id="social-connect" class="py-5 bg-light border-bottom">
+        <div class="container">
+            <div class="card border-0 shadow p-4 p-md-5 bg-white text-center rounded-3">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="fw-bold text-dark display-6 mb-3">Connect With Us</h2>
+                        <div class="accent-line mx-auto mb-3"></div>
+                        <p class="text-secondary mb-4 px-md-3">
+                            Stay updated with our latest industrial safety products, manufacturing milestones, and
+                            engineering insights. Reach out directly on WhatsApp for instant business queries or follow
+                            our official corporate handles below.
+                        </p>
+                        <div class="d-flex flex-wrap justify-content-center gap-4 align-items-center pt-2">
+                            <a href="https://wa.me/yournumber" target="_blank" class="social-btn sb-whatsapp"
+                                title="Chat on WhatsApp"><i class="fa fa-whatsapp"></i></a>
+                            <a href="https://youtube.com/yourchannel" target="_blank" class="social-btn sb-youtube"
+                                title="Watch on YouTube"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://linkedin.com/company/yourcompany" target="_blank"
+                                class="social-btn sb-linkedin" title="Connect on LinkedIn"><i
+                                    class="fa fa-linkedin"></i></a>
+                            <a href="https://facebook.com/yourpage" target="_blank" class="social-btn sb-facebook"
+                                title="Follow on Facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="https://twitter.com/yourhandle" target="_blank" class="social-btn sb-twitter"
+                                title="Follow on X"><i class="fa fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR CLIENTS -->
+    <section id="our-clients" class="py-5 bg-white overflow-hidden border-bottom">
+        <div class="container py-3">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-dark display-6 mb-2">Our Esteemed Clients</h2>
+                <div class="accent-line mx-auto mb-3"></div>
+                <p class="text-muted max-width-text mx-auto">Trusted by leading steel plants, infrastructure giants, and
+                    industrial units across India.</p>
+            </div>
+
+            <div class="client-marquee-container py-2">
+                <div class="client-marquee-track">
+                    <!-- SAIL -->
+                    <div class="client-logo-card" title="Steel Authority of India Limited">
+                        <img src="img/sail.jpg" alt="SAIL">
+                        <p>SAIL</p>
+                    </div>
+
+                    <!-- Indian Railways -->
+                    <div class="client-logo-card" title="Indian Railways">
+                        <img src="img/rail.png" alt="Indian Railways">
+                        <p>INDIAN RAILWAYS</p>
+                    </div>
+
+                    <!-- Tata Steel -->
+                    <div class="client-logo-card" title="Tata Steel Limited">
+                        <img src="img/tata-steel.png" alt="Tata Steel">
+                        <p>TATA STEEL</p>
+                    </div>
+
+                    <!-- JSW Steel -->
+                    <div class="client-logo-card" title="JSW Steel">
+                        <img src="img/jsw.png" alt="JSW Steel">
+                        <p>JSW STEEL</p>
+                    </div>
+
+                    <!-- JSW Cement -->
+                    <div class="client-logo-card" title="JSW Cement">
+                        <img src="img/jsw.png" alt="JSW Cement">
+                        <p>JSW CEMENT</p>
+                    </div>
+
+                    <!-- Shiva Cement -->
+                    <div class="client-logo-card" title="Shiva Cement Limited">
+                        <img src="img/shiva.jpg" alt="Shiva Cement">
+                        <p>SHIVA CEMENT</p>
+                    </div>
+
+                    <!-- Sunflag Steel -->
+                    <div class="client-logo-card" title="Sunflag Iron & Steel Co Ltd">
+                        <img src="img/sunflag" alt="Sunflag Steel">
+                        <p>SUNFLAG STEEL</p>
+                    </div>
+
+                    <!-- Electrosteel -->
+                    <div class="client-logo-card" title="Electrosteel Castings Ltd">
+                        <img src="img/elec.png" alt="Electrosteel">
+                        <p>ELECTROSTEEL</p>
+                    </div>
+
+                    <!-- NF Forging -->
+                    <div class="client-logo-card" title="NF Forging">
+                        <img src="img/nf_forgings_logo.jfif" alt="Electrosteel">
+                        <p>NF FORGING</p>
+                    </div>
+
+                    <!-- Century Ply -->
+                    <div class="client-logo-card" title="Century Plyboards India Ltd">
+                        <img src="img/centuryply.png" alt="Century Ply">
+                        <p>CENTURY PLY</p>
+                    </div>
+
+                    <!-- Alloy Steel Plant -->
+                    <div class="client-logo-card" title="Alloy Steel Plant">
+                        <img src="img/alloy.jfif" alt="Alloy Steel Plant">
+                        <p>ALLOY STEEL PLANT</p>
+                    </div>
+
+                    <!-- Coal India -->
+                    <div class="client-logo-card" title="Coal India Limited">
+                        <img src="img/aaxy2sh85.webp" alt="Coal India">
+                        <p>COAL INDIA</p>
+                    </div>
+
+                    <!-- NALCO -->
+                    <div class="client-logo-card" title="National Aluminium Company Ltd">
+                        <img src="img/nalco.jfif" alt="NALCO">
+                        <p>NALCO</p>
+                    </div>
+
+                    <!-- Bhushan Steel -->
+                    <div class="client-logo-card" title="Bhushan Steel Ltd">
+                        <img src="img/bhushan.png" alt="Bhushan Steel">
+                        <p>BHUSHAN STEEL</p>
+                    </div>
+
+                    <!-- Rungta Mines -->
+                    <div class="client-logo-card" title="Rungta Mines Ltd">
+                        <img src="img/rungta.png" alt="Electrosteel">
+                        <p>RUNGTA MINES</p>
+                    </div>
+
+                    <!-- Skipper India -->
+                    <div class="client-logo-card" title="Skipper India Ltd">
+                        <img src="img/skipper.jfif" alt="Electrosteel">
+                        <p>SKIPPER INDIA</p>
+                    </div>
+
+                    <!-- Seamless Loop Duplicate -->
+                    <div class="client-logo-card" title="Steel Authority of India Limited">
+                        <img src="img/sail.jpg" alt="SAIL">
+                        <p>SAIL</p>
+                    </div>
+                    <div class="client-logo-card" title="Indian Railways">
+                        <img src="img/rail.png" alt="Indian Railways">
+                        <p>INDIAN RAILWAYS</p>
+                    </div>
+                    <div class="client-logo-card" title="Tata Steel Limited">
+                        <img src="img/tata-steel.png" alt="Tata Steel">
+                        <p>TATA STEEL</p>
+                    </div>
+                    <div class="client-logo-card" title="JSW Steel">
+                        <img src="img/jsw.png" alt="JSW Steel">
+                        <p>JSW STEEL</p>
+                    </div>
+                    <div class="client-logo-card" title="JSW Cement">
+                        <img src="img/jsw.png" alt="JSW Cement">
+                        <p>JSW CEMENT</p>
+                    </div>
+                    <div class="client-logo-card" title="Shiva Cement Limited">
+                        <img src="img/shiva.jpg" alt="Shiva Cement">
+                        <p>SHIVA CEMENT</p>
+                    </div>
+                    <div class="client-logo-card" title="Sunflag Steel">
+                        <img src="img/sunflag" alt="Sunflag Steel">
+                        <p>SUNFLAG STEEL</p>
+                    </div>
+                    <div class="client-logo-card" title="Electrosteel Castings Ltd">
+                        <img src="img/elec.png" alt="Electrosteel">
+                        <p>ELECTROSTEEL</p>
+                    </div>
+                    <div class="client-logo-card" title="NF Forging">
+                        <img src="img/nf_forgings_logo.jfif" alt="NF Forging">
+                        <p>NF FORGING</p>
+                    </div>
+                    <div class="client-logo-card" title="Century Plyboards India Ltd">
+                        <img src="img/centuryply.png" alt="Electrosteel">
+                        <p>CENTURY PLY</p>
+                    </div>
+                    <div class="client-logo-card" title="Alloy Steel Plant">
+                        <img src="img/alloy.jfif" alt="Alloy Steel Plant">
+                        <p>ALLOY STEEL PLANT</p>
+                    </div>
+                    <div class="client-logo-card" title="Coal India Limited">
+                        <img src="img/aaxy2sh85.webp" alt="Coal India">
+                        <p>COAL INDIA</p>
+                    </div>
+                    <div class="client-logo-card" title="National Aluminium Company Ltd">
+                        <img src="img/nalco.jfif" alt="NALCO">
+                        <p>NALCO</p>
+                    </div>
+                    <div class="client-logo-card" title="Bhushan Steel Ltd">
+                        <img src="img/bhushan.png" alt="Bhushan Steel">
+                        <p>BHUSHAN STEEL</p>
+                    </div>
+                    <div class="client-logo-card" title="Rungta Mines Ltd">
+                        <img src="img/rungta.png" alt="Electrosteel">
+                        <p>RUNGTA MINES</p>
+                    </div>
+                    <div class="client-logo-card" title="Skipper India Ltd">
+                        <img src="img/elec.png" alt="Electrosteel">
+                        <p>SKIPPER INDIA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR VISION & MISSION -->
+    <section id="our-vision" class="py-5 bg-light border-bottom">
+        <div class="container py-4">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5">
+                    <div class="vision-img-frame position-relative rounded-3 shadow">
+                        <img src="img/slide3.jpg" alt="L.R. Engineering Works Vision"
+                            class="img-fluid rounded-3 vision-hero-img">
+                        <div
+                            class="vision-badge p-3 bg-dark text-white rounded position-absolute bottom-0 start-0 m-3 shadow-sm font-monospace border-start border-danger border-3">
+                            <span class="d-block small text-muted text-uppercase">Est. Heritage</span>
+                            <strong class="text-light">Since 2017</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="mb-4">
+                        <h2 class="fw-bold text-dark display-6 mb-2">Our Vision &amp; Mission</h2>
+                        <div class="accent-line mb-3"></div>
+                        <p class="text-muted">Forging ahead with uncompromising standards in industrial lifting safety
+                            and engineering reliability.</p>
+                    </div>
+
+                    <div class="d-flex align-items-start gap-3 mb-4 vision-block">
+                        <div
+                            class="vision-icon-box bg-white text-center shadow-sm rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                            <i class="fa fa-eye text-accent"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold text-dark mb-2">Our Core Vision</h4>
+                            <p class="text-secondary small lh-lg mb-0">To be globally recognized as the benchmark for premium industrial rigging and wire rope
+solutions, pioneering safer, smarter, and more reliable heavy industrial lifting practices
+across India’s core industries.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start gap-3 mb-4 vision-block">
+                        <div
+                            class="vision-icon-box bg-white text-center shadow-sm rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                            <i class="fa fa-rocket text-accent"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold text-dark mb-2">Strategic Mission</h4>
+                            <p class="text-secondary small lh-lg mb-0">
+                              To consistently deliver high-tensile, custom-engineered heavy lifting solution to major
+infrastructure, backed by timely logistics execution, persistent design upgrades, and certified
+quality controls and materials.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start gap-3 vision-block">
+                        <div
+                            class="vision-icon-box bg-white text-center shadow-sm rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                            <i class="fa fa-shield text-accent"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold text-dark mb-2">Safety Paradigm</h4>
+                            <p class="text-secondary small lh-lg mb-0">
+                                Because lives rely directly on hardware strength, our mission is to treat structural reliability
+as an ethical commitment, engineering load capacities that always exceed typical industry
+stresses.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer id="contact" class="custom-footer pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 mb-4">
+
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="footer-heading mb-3 text-white">L.R. Engineering Works</h4>
+                    <p class="footer-text small mb-4">
+                        An ISO 9001:2015 certified company with over 40 years of pioneering heritage in manufacturing
+                        premium wire ropes, rigging slings, and industrial safety equipment.
+                    </p>
+                    <ul class="list-unstyled footer-contact-info small">
+                        <li class="mb-2"><i class="fa fa-map-marker text-accent me-2"></i> 40/4, Strand Road,1st Floor,
+                            Kolkata - 700 001, India</li>
+                        <li class="mb-2"><i class="fa fa-envelope text-accent me-2"></i> info@lrengineering.com</li>
+                        <li><i class="fa fa-phone text-accent me-2"></i> +91 98311 17651 / 8583898589</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h5 class="footer-heading mb-3 text-white">Quick Links</h5>
+                    <ul class="list-unstyled footer-links small">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="products.html">Products</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-6">
+                    <h5 class="footer-heading mb-3 text-white">Our Products</h5>
+                    <ul class="list-unstyled footer-links small">
+                        <li class="mb-2"><a href="wire-rope.html">Industrial Wire Ropes</a></li>
+                        <li class="mb-2"><a href="wire-rope-sling.html">Wire Rope Slings</a></li>
+                        <li class="mb-2"><a href="polyester-webbing-sling.html">Polyester Webbing Slings</a></li>
+                        <li class="mb-2"><a href="chain-sling.html">Chain Slings</a></li>
+                        <li class="mb-2"><a href="lifting-tackles.html">Lifting Tackles</a></li>
+                        <li class="mb-2"><a href="rigging-hardware.html">Rigging Hardware</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading mb-3 text-white">Connect With Us</h5>
+                    <p class="footer-text small mb-3">Follow us for technical product specifications and updates.</p>
+
+                    <div class="d-flex flex-wrap gap-2 pt-1 footer-social-grid">
+                        <a href="https://wa.me/yournumber" target="_blank" class="f-social-btn fsb-whatsapp"
+                            title="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+                        <a href="https://youtube.com/yourchannel" target="_blank" class="f-social-btn fsb-youtube"
+                            title="YouTube"><i class="fa fa-youtube-play"></i></a>
+                        <a href="https://linkedin.com/company/yourcompany" target="_blank"
+                            class="f-social-btn fsb-linkedin" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://facebook.com/yourpage" target="_blank" class="f-social-btn fsb-facebook"
+                            title="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/yourhandle" target="_blank" class="f-social-btn fsb-twitter"
+                            title="Twitter"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="border-secondary my-4 opacity-25">
+
+            <div class="row align-items-center g-2 footer-credits-row small">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 footer-text">&copy; 2026 L.R. Engineering Works. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 footer-text">
+                        Developed by : <a href="https://skcinfotech.in/" target="_blank"
+                            class="agency-link fw-semibold">SKC Infotech</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

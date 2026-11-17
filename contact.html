@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us | L.R. Engineering Works - LRLIFT</title>
+    <meta name="description"
+        content="Get in touch with L.R. Engineering Works (Brand: LRLIFT) for industrial steel wire ropes, rigging slings, webbing slings & material-handling equipment. Office in Strand Road, Kolkata.">
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 4.7 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        /* Contact Page Custom Extension Styles */
+        .heading-accent-red {
+            font-family: var(--font-heading), 'Kameron', serif;
+            color: var(--primary-navy, #002B7F);
+            font-weight: 700;
+        }
+
+        .contact-info-card {
+            background: #ffffff;
+            border: 1px solid #D9E2EC;
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            height: 100%;
+            transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+            box-shadow: 0 4px 12px rgba(0, 43, 127, 0.04);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contact-info-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 32px rgba(0, 56, 168, 0.12);
+            border-color: var(--accent-color, #C80000);
+        }
+
+        .contact-icon-circle {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-icon-circle.icon-blue {
+            background-color: rgba(0, 56, 168, 0.1);
+            color: #0038A8;
+        }
+
+        .contact-icon-circle.icon-red {
+            background-color: rgba(200, 0, 0, 0.1);
+            color: #C80000;
+        }
+
+        .contact-info-card:hover .contact-icon-circle.icon-blue {
+            background-color: #0038A8;
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        .contact-info-card:hover .contact-icon-circle.icon-red {
+            background-color: #C80000;
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        .card-action-link {
+            color: var(--accent-color, #C80000);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.88rem;
+            transition: color 0.2s ease;
+        }
+
+        .card-action-link:hover {
+            color: var(--accent-hover, #8F0000);
+            text-decoration: underline;
+        }
+
+        .contact-form-card {
+            background: #ffffff;
+            border: 1px solid #D9E2EC;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 43, 127, 0.06);
+            overflow: hidden;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #002B7F;
+            font-size: 0.92rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .form-control,
+        .form-select {
+            border: 1.5px solid #D9E2EC;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+            color: #334155;
+            background-color: #FAFAFC;
+            transition: all 0.2s ease;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            background-color: #ffffff;
+            border-color: #0038A8;
+            box-shadow: 0 0 0 4px rgba(0, 56, 168, 0.12);
+            outline: none;
+        }
+
+        .quick-info-box {
+            background: linear-gradient(135deg, #002B7F 0%, #001C55 100%);
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            color: #ffffff;
+        }
+
+        .map-wrapper {
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #D9E2EC;
+            box-shadow: 0 10px 30px rgba(0, 43, 127, 0.08);
+            position: relative;
+        }
+
+        .map-iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+            display: block;
+        }
+
+        @media (max-width: 767.98px) {
+            .map-iframe {
+                height: 350px;
+            }
+
+            .quick-info-box {
+                padding: 1.75rem 1.25rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 0. NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar shadow-sm">
+        <div class="container">
+            <a class="navbar-brand py-1" href="index.html">
+                <img src="img/lrlogo.png" alt="L.R. Engineering Works Logo" class="navbar-logo">
+            </a>
+
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 custom-nav-links">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1 — HERO BANNER -->
+    <section class="py-5 bg-dark text-white text-center position-relative"
+        style="background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.8)), url('img/slide1.jpg'); background-size: cover; background-position: center; margin-top: 70px;">
+        <div class="container py-4">
+            <h1 class="display-4 fw-bold font-monospace text-uppercase tracking-wider">Contact Us</h1>
+            <div class="accent-line mx-auto mb-3"></div>
+            <p class="lead text-light mb-3 max-width-text mx-auto" style="font-size: 1.15rem; opacity: 0.95;">
+                Get in touch for industrial lifting, wire ropes & rigging solutions.
+            </p>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center mb-0 small font-monospace">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-light text-decoration-none">Home</a>
+                    </li>
+                    <li class="breadcrumb-item text-warning active" aria-current="page">Contact Us</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- SECTION 2 — CONTACT INFORMATION CARDS -->
+    <section class="py-5 bg-light border-bottom">
+        <div class="container py-3">
+            <div class="text-center mb-5">
+                <h2 class="heading-accent-red display-6 mb-2">Get In Touch</h2>
+                <div class="accent-line mx-auto mb-3"></div>
+                <p class="text-secondary max-width-text mx-auto small">Reach out through any of our channels for sales
+                    inquiries, technical specifications, or custom load requirements.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Card 1: Office Address -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="contact-info-card">
+                        <div class="contact-icon-circle icon-blue">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <h5 class="fw-bold text-dark mb-2">Office Address</h5>
+                        <p class="text-muted small mb-3 flex-grow-1">
+                            40/4, Strand Road, 1st Floor,<br>Kolkata – 700001, India
+                        </p>
+                        <a href="#map-section" class="card-action-link">
+                            <i class="fa fa-location-arrow me-1"></i>View Location Map
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Phone -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="contact-info-card">
+                        <div class="contact-icon-circle icon-red">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <h5 class="fw-bold text-dark mb-2">Phone Number</h5>
+                        <p class="text-muted small mb-3 flex-grow-1">
+                            +91 98311 17651<br>+91 8583898589
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="tel:+919831117651" class="card-action-link"><i class="fa fa-phone me-1"></i>Call
+                                #1</a>
+                            <span class="text-muted">|</span>
+                            <a href="tel:+919830607389" class="card-action-link"><i class="fa fa-phone me-1"></i>Call
+                                #2</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Email -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="contact-info-card">
+                        <div class="contact-icon-circle icon-blue">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <h5 class="fw-bold text-dark mb-2">Email Address</h5>
+                        <p class="text-muted small mb-3 flex-grow-1">
+                            info@lrengineering.com
+                        </p>
+                        <a href="mailto:info@lrengineering.com" class="card-action-link">
+                            <i class="fa fa-paper-plane me-1"></i>Send Email Directly
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Working Hours -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="contact-info-card">
+                        <div class="contact-icon-circle icon-red">
+                            <i class="fa fa-clock-o"></i>
+                        </div>
+                        <h5 class="fw-bold text-dark mb-2">Working Hours</h5>
+                        <p class="text-muted small mb-3 flex-grow-1">
+                            Mon–Sat | 9:30 AM – 6:30 PM<br>
+                            <span class="text-danger fw-semibold">Sunday: Closed</span>
+                        </p>
+                        <span class="badge bg-light text-secondary border px-2 py-1 small">
+                            <i class="fa fa-calendar-check-o me-1 text-accent"></i>Dispatch Operational
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3 — CONTACT FORM & QUICK INFO -->
+    <section class="py-5 bg-white border-bottom">
+        <div class="container py-3">
+            <div class="row g-4 align-items-stretch">
+
+                <!-- Left: Form Column -->
+                <div class="col-lg-7">
+                    <div class="contact-form-card p-4 p-md-5">
+                        <div class="mb-4">
+                            <h3 class="heading-accent-red display-6 mb-2">Send Us An Enquiry</h3>
+                            <p class="text-secondary small mb-0">Fill out your technical requirements below and our
+                                engineering team will respond within 24 business hours.</p>
+                        </div>
+
+                        <!-- Success Alert Banner (Hidden by default) -->
+                        <div class="alert alert-success alert-dismissible fade show d-none rounded-3 mb-4"
+                            id="submitSuccessAlert" role="alert">
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-check-circle fa-2x me-3 text-success"></i>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Enquiry Submitted Successfully!</h6>
+                                    <p class="mb-0 small">Thank you for contacting L.R. Engineering Works. Our technical
+                                        representative will reach out to you shortly.</p>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Bootstrap Validated Contact Form -->
+                        <form class="needs-validation" id="contactForm" novalidate>
+                            <div class="row g-3">
+                                <!-- Full Name -->
+                                <div class="col-md-6">
+                                    <label for="fullName" class="form-label">Full Name <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="fullName"
+                                        placeholder="e.g. Rajesh Kumar" required>
+                                    <div class="invalid-feedback">Please enter your full name.</div>
+                                    <div class="valid-feedback">Looks good!</div>
+                                </div>
+
+                                <!-- Company Name -->
+                                <div class="col-md-6">
+                                    <label for="companyName" class="form-label">Company Name</label>
+                                    <input type="text" class="form-control" id="companyName"
+                                        placeholder="e.g. Tata Steel / L&T Civil">
+                                </div>
+
+                                <!-- Email -->
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email Address <span
+                                            class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" placeholder="name@company.com"
+                                        required>
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                    <div class="valid-feedback">Looks good!</div>
+                                </div>
+
+                                <!-- Phone Number -->
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Phone Number <span
+                                            class="text-danger">*</span></label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="+91 98311 00000"
+                                        pattern="^[0-9\-\+\s\(\)]{8,15}$" required>
+                                    <div class="invalid-feedback">Please enter a valid phone number.</div>
+                                    <div class="valid-feedback">Looks good!</div>
+                                </div>
+
+                                <!-- Product Requirement Select -->
+                                <div class="col-12">
+                                    <label for="productRequirement" class="form-label">Product Requirement <span
+                                            class="text-danger">*</span></label>
+                                    <select class="form-select" id="productRequirement" required>
+                                        <option value="" selected disabled>Select Product Requirement...</option>
+                                        <option value="Industrial Wire Ropes">Industrial Steel Wire Ropes (Crane,
+                                            Elevator, Excavator)</option>
+                                        <option value="Wire Rope Slings">Mechanical & Pressed Steel Wire Rope Slings
+                                        </option>
+                                        <option value="Polyester Webbing Slings">Polyester Webbing Slings & Cargo
+                                            Lashings</option>
+                                        <option value="Alloy Steel Chain Slings">Alloy Steel Chain Slings (Grade 80 /
+                                            Grade 100)</option>
+                                        <option value="Lifting Tackles">Heavy Duty Lifting Tackles & Pulley Blocks
+                                        </option>
+                                        <option value="Fittings & Hardware">Rigging Hardware (Shackles, Turnbuckles,
+                                            Hooks)</option>
+                                        <option value="Custom Engineering">Custom Engineering & Proof Load Testing
+                                        </option>
+                                        <option value="Other Requirement">General Inquiry / Bulk Order Quote</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select a product requirement.</div>
+                                    <div class="valid-feedback">Looks good!</div>
+                                </div>
+
+                                <!-- Message -->
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message / Technical Details <span
+                                            class="text-danger">*</span></label>
+                                    <textarea class="form-control" id="message" rows="4"
+                                        placeholder="Specify load capacity (MT), length, wire construction specs, quantity, or delivery location..."
+                                        required></textarea>
+                                    <div class="invalid-feedback">Please provide your enquiry details.</div>
+                                    <div class="valid-feedback">Looks good!</div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="col-12 pt-2">
+                                    <button type="submit"
+                                        class="btn btn-accent btn-lg px-5 py-3 fw-semibold text-uppercase w-100 w-sm-auto shadow">
+                                        <i class="fa fa-paper-plane me-2"></i>Send Enquiry
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Right: Quick Support & Info Box -->
+                <div class="col-lg-5">
+                    <div class="quick-info-box shadow-lg">
+                        <div>
+                            <span class="badge bg-danger text-uppercase tracking-wider px-3 py-2 mb-3">Instant
+                                Assistance</span>
+                            <h3 class="font-monospace fw-bold text-white mb-3">Direct Technical Sales Support</h3>
+                            <p class="text-light opacity-90 small lh-lg mb-4">
+                                Need an immediate quotation or custom rigging advice? Our senior engineers are available
+                                to review technical blueprints and load capacity calculations.
+                            </p>
+
+                            <hr class="border-light opacity-25 my-4">
+
+                            <!-- Feature list -->
+                            <div class="info-item">
+                                <div class="info-item-icon">
+                                    <i class="fa fa-certificate"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1 text-white">ISO 9001:2015 Quality Assured</h6>
+                                    <p class="mb-0 small text-light opacity-75">All wire ropes and slings come with test
+                                        certificates & batch inspection reports.</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-item-icon">
+                                    <i class="fa fa-truck"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1 text-white">Pan-India Express Freight</h6>
+                                    <p class="mb-0 small text-light opacity-75">Direct dispatch from Kolkata workshop to
+                                        core infrastructure project sites nationwide.</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-item-icon">
+                                    <i class="fa fa-cogs"></i>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold mb-1 text-white">Custom Load Engineering</h6>
+                                    <p class="mb-0 small text-light opacity-75">Custom splicing, swaging, and ferrule
+                                        pressing for high capacity lifting assemblies.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 border-top border-white border-opacity-10 mt-3">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="small text-light opacity-90"><i class="fa fa-headphones me-2"></i>Emergency
+                                    Rigging Call:</span>
+                                <a href="tel:+919831117651" class="btn btn-sm btn-outline-light fw-bold px-3 py-1">+91
+                                    98311 17651</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4 — GOOGLE MAP SECTION -->
+    <section class="py-5 bg-light border-bottom" id="map-section">
+        <div class="container py-3">
+            <div class="row align-items-center mb-4">
+                <div class="col-md-8 text-center text-md-start">
+                    <h2 class="heading-accent-red display-6 mb-1">Our Registered Office Location</h2>
+                    <p class="text-secondary small mb-0">Visit our head office & workshop at Strand Road, Kolkata's
+                        primary industrial trading hub.</p>
+                </div>
+                <div class="col-md-4 text-center text-md-end mt-3 mt-md-0">
+                    <a href="https://maps.google.com/?q=40/2+Strand+Road+Kolkata+700001" target="_blank"
+                        class="btn btn-outline-dark fw-semibold rounded-pill px-4 py-2">
+                        <i class="fa fa-map-marker text-accent me-2"></i>Open In Google Maps
+                    </a>
+                </div>
+            </div>
+
+            <!-- Responsive Google Map Embed -->
+            <div class="map-wrapper shadow-lg">
+                <iframe class="map-iframe"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.288220042456!2d88.34842187595568!3d22.587002032431667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277bd21c1722d%3A0x6b403306dbab1d92!2s40%2F2%2C%20Strand%20Rd%2C%20Fairley%20Place%2C%20B.B.D.%20Bagh%2C%20Kolkata%2C%20West%20Bengal%20700001!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    title="L.R. Engineering Works Office Location Map">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- FOOTER -->
+    <footer id="contact" class="custom-footer pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 mb-4">
+
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="footer-heading mb-3 text-white">L.R. Engineering Works</h4>
+                    <p class="footer-text small mb-4">
+                        An ISO 9001:2015 certified company with a pioneering heritage in manufacturing premium wire
+                        ropes, rigging slings, and industrial safety equipment.
+                    </p>
+                    <ul class="list-unstyled footer-contact-info small">
+                        <li class="mb-2"><i class="fa fa-map-marker text-accent me-2"></i> 40/4, Strand Road, 1st Floor,
+                            Kolkata - 700 001, India</li>
+                        <li class="mb-2"><i class="fa fa-envelope text-accent me-2"></i> info@lrengineering.com</li>
+                        <li><i class="fa fa-phone text-accent me-2"></i> +91 98311 17651 / 8583898589</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h5 class="footer-heading mb-3 text-white">Quick Links</h5>
+                    <ul class="list-unstyled footer-links small">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="products.html">Products</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-6">
+                    <h5 class="footer-heading mb-3 text-white">Our Products</h5>
+                    <ul class="list-unstyled footer-links small">
+                        <li class="mb-2"><a href="wire-rope.html">Industrial Wire Ropes</a></li>
+                        <li class="mb-2"><a href="wire-rope-sling.html">Wire Rope Slings</a></li>
+                        <li class="mb-2"><a href="polyester-webbing-sling.html">Polyester Webbing Slings</a></li>
+                        <li class="mb-2"><a href="chain-sling.html">Chain Slings</a></li>
+                        <li class="mb-2"><a href="lifting-tackles.html">Lifting Tackles</a></li>
+                        <li><a href="fittings-store.html">Rigging Hardware</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading mb-3 text-white">Connect With Us</h5>
+                    <p class="footer-text small mb-3">Follow us for technical product specifications and updates.</p>
+
+                    <div class="d-flex flex-wrap gap-2 pt-1 footer-social-grid">
+                        <a href="https://wa.me/yournumber" target="_blank" class="f-social-btn fsb-whatsapp"
+                            title="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+                        <a href="https://youtube.com/yourchannel" target="_blank" class="f-social-btn fsb-youtube"
+                            title="YouTube"><i class="fa fa-youtube-play"></i></a>
+                        <a href="https://linkedin.com/company/yourcompany" target="_blank"
+                            class="f-social-btn fsb-linkedin" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://facebook.com/yourpage" target="_blank" class="f-social-btn fsb-facebook"
+                            title="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/yourhandle" target="_blank" class="f-social-btn fsb-twitter"
+                            title="Twitter"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="border-secondary my-4 opacity-25">
+
+            <div class="row align-items-center g-2 footer-credits-row small">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 footer-text">&copy; 2026 L.R. Engineering Works. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 footer-text">
+                        Developed by : <a href="https://skcinfotech.in/" target="_blank"
+                            class="agency-link fw-semibold">SKC Infotech</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Client-Side Form Validation JS -->
+    <script>
+        (function () {
+            'use strict';
+            const form = document.getElementById('contactForm');
+            const successAlert = document.getElementById('submitSuccessAlert');
+
+            if (form) {
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    if (!form.checkValidity()) {
+                        form.classList.add('was-validated');
+                    } else {
+                        // Form is valid! Show alert and reset
+                        if (successAlert) {
+                            successAlert.classList.remove('d-none');
+                            successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                        form.reset();
+                        form.classList.remove('was-validated');
+                    }
+                }, false);
+            }
+        })();
+    </script>
+</body>
+
+</html>
